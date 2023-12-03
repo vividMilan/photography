@@ -1,0 +1,39 @@
+nav{
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    background-color: transparent;
+    z-index: 1;
+    transition: 0.2s all ease;
+    span{
+        font-family: var(--cursive-font);
+        color: var(--primary-color);
+        font-size: 2.5rem;
+        letter-spacing: 0.25rem;
+    }
+    ul{
+        list-style: none;
+    }
+    a{
+        padding-inline: 1.5rem;
+        font-family: 'Montserrat';
+        padding-block: 0.5rem;
+        height: 100%;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 1rem;
+        color: var(--text-color);
+        transition: 0.2s all ease;
+        &:hover{
+            color: var(--primary-color);
+        }
+    }
+    li{
+        display: inline;
+    }
+    &.scroll{
+        background-color: var(--background-color);
+    }
+}
