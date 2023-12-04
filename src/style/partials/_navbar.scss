@@ -1,16 +1,20 @@
 nav{
     display: flex;
     position: fixed;
-    justify-content: space-around;
     width: 100%;
+    padding: 1rem 10rem;
+    justify-content: space-between;
     align-items: center;
     background-color: transparent;
     z-index: 1;
     transition: 0.2s all ease;
+    .sidebar-btn{
+        display: none;
+    }
     span{
         font-family: var(--cursive-font);
         color: var(--primary-color);
-        font-size: 2.5rem;
+        font-size: 3rem;
         letter-spacing: 0.25rem;
     }
     ul{
@@ -34,6 +38,6 @@ nav{
         display: inline;
     }
     &.scroll{
-        background-color: var(--background-color);
+        background-color: var(--navbar-color);
     }
 }

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import Sidebar from './Sidebar'
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false)
+    const [showSidebar, setShowSidebar] = useState(false)
 
     const linkItems = [
         {
@@ -37,13 +39,22 @@ const Navbar = () => {
   return (
     <nav className={isScrolled ? 'nav scroll' : 'nav'}>
         <span>Photography</span>
-        <ul>
+        <ul className='link'>
             {linkItems.map((link) => (
-                <li>
+                <li  key={link.title} >
                     <Link to={link.path}>{link.title}</Link>
                 </li>
             ))}
         </ul>
+        <div onClick={() => setShowSidebar(!showSidebar)} className={showSidebar ? 'sidebar-btn active' : "sidebar-btn"}>
+                <div className='bar'></div>
+                <div className='bar'></div>
+        </div>
+        {showSidebar && (
+            <Sidebar 
+                linkItems = {linkItems}
+            />
+        )}
     </nav>
   )
 }

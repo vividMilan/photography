@@ -1,0 +1,154 @@
+:root{
+    --background-color: #222;
+    --primary-color: rgb(255, 47, 141);
+    --text-color: whitesmoke;
+    --cursive-font: 'Alex Brush', cursive;
+    --animation-duration: 0.2s;
+    --font-family: 'Montserrat', sans-serif;
+    --navbar-color: #00BFB3;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+a{
+    text-decoration: none;
+    &.active{
+        color: var(--primary-color);
+    }
+}
+
+span{
+    cursor: default;
+}
+
+.section{
+    padding-inline: 1rem;
+    background-color: var(--background-color);
+}
+
+.about{
+    height: 100dvh;
+    padding-block: 5rem;
+    padding-inline: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10rem;
+    .image-continer{
+        img{
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 0.5rem solid var(--primary-color);
+        }
+    }
+    .about-description{
+        color: var(--text-color);
+        h2{
+            line-height: 2.5rem;
+        }
+    }
+}
+
+
+.banner{
+    height: 100vh;
+    width: 100%;
+    background:  linear-gradient(35deg, rgba(35, 35, 35, 0.748), rgba(0, 0, 0, 0.3)), url('../../public/assets/bird_1.jpg');
+    background-size: cover;
+    background-position: center;
+    span{
+        font-size: 13rem;
+        top: 200px;
+        left: 100px;
+        position: relative;
+        font-family: var(--cursive-font);
+        color: var(--text-color);
+    }  
+}
+
+@import './partials/navbar';
+@import './partials/animations';
+@import './partials/sidebar';
+
+@media screen and (max-width : 768px) {
+
+    .about{
+        gap: 2.5rem;
+        .image-continer{
+            img{
+                width: 250px;
+                height: 250px;
+                border: 0.2rem solid var(--primary-color);
+            }
+        }
+        .about-description{
+            h2{
+                line-height: 2rem;
+            }
+            p{
+                line-height: 1.2rem;
+            }
+        }
+    }
+
+    .banner{
+        background:  linear-gradient(35deg, rgba(35, 35, 35, 0.748), rgba(0, 0, 0, 0.3)), url('../../public/assets/sunset1.JPG');
+        background-size: cover;
+        background-position: center;
+        height: 100dvh;
+        width: 100%;
+        span{
+            font-size: 6rem;
+            top: 45%;
+        }
+    }
+
+    nav{
+        justify-content: space-between;
+        padding-inline: 2.5rem;
+        span{
+            font-size: 2.5rem;
+        }
+        li{
+            display: none;
+        }
+        .sidebar-btn{
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.113);
+            backdrop-filter: blur(5px);
+            border-radius: 5px;
+            height: 40px;
+            width: 40px;
+            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0.60rem 0.25rem;
+            .bar{
+                background-color: rgb(54, 54, 54);
+                width: 95%;
+                height: 3px;
+                border-radius: 5px;
+                transition: var(--animation-duration) all ease-in-out;
+            }
+            &.active{
+                .bar{
+                    &:first-child {
+                        transform: translateY(calc(100% + 90%)) rotate(45deg);
+                    }
+                    &:last-child {
+                        transform: translateY(calc(-100% - 90%)) rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+}
