@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutSection = () => {
   return (
-    <div className='about section'>
+    <section className='about section'>
         <div className='image-continer'>
             <img src="/assets/spider2.jpeg" alt="" />
         </div>
@@ -11,7 +11,7 @@ const AboutSection = () => {
             <hr />
             <p>I have an intrest in photography. My knowledge about photography and my collections are showcased in this site. There is also a feedback section for sharing your thoughts.</p>
         </div>
-    </div>
+    </section>
   )
 }
 

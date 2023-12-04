@@ -1,0 +1,24 @@
+.about{
+    height: 100dvh;
+    padding-block: 5rem;
+    padding-inline: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10rem;
+    .image-continer{
+        img{
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 0.5rem solid var(--primary-color);
+        }
+    }
+    .about-description{
+        color: var(--text-color);
+        h2{
+            line-height: 2.5rem;
+        }
+    }
+}

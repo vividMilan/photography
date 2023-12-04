@@ -2,9 +2,9 @@ import React from 'react'
 
 const HeroSection = () => {
   return (
-    <div className='banner'>
+    <section className='banner'>
       <span>Photography</span>
-    </div>
+    </section>
   )
 }
 
