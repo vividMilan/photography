@@ -5,6 +5,8 @@
     --cursive-font: 'Alex Brush', cursive;
     --animation-duration: 0.2s;
     --font-family: 'Montserrat', sans-serif;
+    --font-size: 1.1rem;
+    --margin: 4rem;
     --navbar-color: #00BFB3;
 }
 
@@ -32,8 +34,14 @@ span{
 }
 
 .section{
-    padding-inline: 7rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-inline: 10rem;
     background-color: var(--background-color);
+    font-size: var(--font-size);
+    section{
+        margin-bottom: var(--margin);
+    }
 }
 
 .banner{
@@ -52,115 +60,68 @@ span{
     }  
 }
 
-.footer{
-    background-color: #141414;
+.exposure{
     color: var(--text-color);
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 2fr 1fr 1fr;
-    padding-block: 4rem;
-    font-size: 1rem;
-    p.title{
-        opacity: 1;
-        margin-bottom: 1rem;
+    h1{
+        font-size: 3rem;
+        margin-bottom: 3rem;
     }
-    p {
-        opacity: 0.5;
+    span{
+        color: var(--primary-color);
+    }
+    .exposure-list{
+        margin-block: 1.5rem;
+        ul{
+            padding-left: 2rem;
+            font-size: 1em;
+            list-style-type: none ;
+            li{
+                line-height: 1.5rem;
+                transition: 0.2s all ease-in-out;
+                cursor: pointer;
+               &:hover{
+                padding-left: 1rem;
+                color: var(--navbar-color);
+               }
+            }
+        }
+    }
+    .image-container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            margin-block: var(--margin);
+            transform: scale(0.8);
+        }
+    }
+    #aperture{
+        img{
+            width: 70%;
+        }
+    }
+    .ImageCard{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin-block: var(--margin);
+        img{
+            width: 600px !important;
+        }
+    }
+    #reverseFlex{
+        flex-direction: row-reverse !important;
     }
 }
+
 
 @import './partials/navbar';
 @import './partials/animations';
 @import './partials/sidebar';
 @import './partials/aboutSection';
-
-@media screen and (max-width : 768px) {
-
-    .section{
-        padding-inline: 2rem;
-    }
-
-    .about{
-        gap: 2.5rem;
-        .image-continer{
-            img{
-                width: 250px;
-                height: 250px;
-                border: 0.2rem solid var(--primary-color);
-            }
-        }
-        .about-description{
-            h2{
-                line-height: 2rem;
-            }
-            p{
-                line-height: 1.2rem;
-            }
-        }
-    }
-
-    .banner{
-        background:  linear-gradient(35deg, rgba(35, 35, 35, 0.748), rgba(0, 0, 0, 0.3)), url('../../public/assets/sunset1.JPG');
-        background-size: cover;
-        background-position: center;
-        height: 100dvh;
-        width: 100%;
-        span{
-            font-size: 6rem;
-            top: 45%;
-        }
-    }
-
-    nav{
-        justify-content: space-between;
-        padding-inline: 2.5rem;
-        span{
-            font-size: 2.5rem;
-        }
-        li{
-            display: none;
-        }
-        .sidebar-btn{
-            cursor: pointer;
-            background-color: rgba(255, 255, 255, 0.113);
-            backdrop-filter: blur(5px);
-            border-radius: 5px;
-            height: 40px;
-            width: 40px;
-            display: block;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            padding: 0.60rem 0.25rem;
-            .bar{
-                background-color: rgb(54, 54, 54);
-                width: 95%;
-                height: 3px;
-                border-radius: 5px;
-                transition: var(--animation-duration) all ease-in-out;
-            }
-            &.active{
-                .bar{
-                    &:first-child {
-                        transform: translateY(calc(100% + 90%)) rotate(45deg);
-                    }
-                    &:last-child {
-                        transform: translateY(calc(-100% - 90%)) rotate(-45deg);
-                    }
-                }
-            }
-        }
-    }
-
-    .footer{
-        grid-template-columns: repeat(4, 1fr);
-        .footer-container:nth-child(1){
-            grid-column: span 4;
-        }
-        .footer-container:nth-child(2),
-        .footer-container:nth-child(3){
-            grid-column: span 2;
-        }
-    }
-}
+@import './partials/footer';
+@import './partials/expandGallery';
+@import './partials/IsoCard'

@@ -1,0 +1,16 @@
+.footer{
+    background-color: #141414;
+    color: var(--text-color);
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding-block: 4rem;
+    font-size: 1rem;
+    p.title{
+        opacity: 1;
+        margin-bottom: 1rem;
+    }
+    p {
+        opacity: 0.5;
+    }
+}

@@ -36,6 +36,9 @@ nav{
     }
     li{
         display: inline;
+        &.active{
+            color: var(--primary-color);
+        }
     }
     &.scroll{
         background-color: var(--navbar-color);

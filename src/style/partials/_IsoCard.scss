@@ -1,0 +1,18 @@
+.iso-cards-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    .iso-card{
+        margin-block: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 400px;
+            height: 600px;
+        }
+        p{
+            padding-top: 1rem;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import Sidebar from './Sidebar'
 
 const Navbar = () => {
@@ -9,15 +9,23 @@ const Navbar = () => {
     const linkItems = [
         {
             title: 'Home',
-            path: '#Home'
+            path: '/'
         },
         {
-            title: 'Learn',
-            path: '#Learn'
+            title: 'Exposure Triangle',
+            path: '/exposure-triangle'
+        },
+        {
+            title: 'Composition Techniques',
+            path: '/composition-techniques'
         },
         {
             title: 'Gallery',
-            path: '#Gallery'
+            path: '/gallery'
+        },
+        {
+            title: 'Feedback',
+            path: '/feedback'
         },
     ]
 
@@ -41,8 +49,8 @@ const Navbar = () => {
         <span>Photography</span>
         <ul className='link'>
             {linkItems.map((link) => (
-                <li  key={link.title} >
-                    <Link to={link.path}>{link.title}</Link>
+                <li key={link.title} >
+                    <NavLink to={link.path}>{link.title}</NavLink>
                 </li>
             ))}
         </ul>
