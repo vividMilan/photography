@@ -23,10 +23,6 @@ const Navbar = () => {
             title: 'Gallery',
             path: '/gallery'
         },
-        {
-            title: 'Feedback',
-            path: '/feedback'
-        },
     ]
 
     useEffect(() =>{

@@ -15,7 +15,7 @@ const ExposureIntro = () => {
         about basics of Photography. It shows the main elements that effect the
         exposure of the photograph.
       </p>
-      <div className="exposure-list">
+      <div className="topic-list">
         <p>The main Elements are,</p>
         <br />
         <ul>
