@@ -5,7 +5,7 @@ const CenterComposition = () => {
   return (
     <section id="centerComposition">
         <h1>
-            <span>Rule of Third</span>
+            <span>Center Composition</span>
         </h1>
         <p>
             Centering your subjects in the dead center results a boring image, However photography is an art and it has exeptions. In this composition techniques subject is placed center. It's also important to maintain a symmetry in the frame.
