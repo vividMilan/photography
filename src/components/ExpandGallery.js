@@ -27,10 +27,6 @@ const ExpandGallery = () => {
             title: 'carnival',
             imageSrc: '/assets/exposureTriangle/Shutter Gallery/carnival.JPG'
         },
-        {
-            title: 'stars',
-            imageSrc: '/assets/exposureTriangle/Shutter Gallery/stars.jpg'
-        }
 
     ]
 
