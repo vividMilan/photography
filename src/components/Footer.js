@@ -12,8 +12,9 @@ const Footer = () => {
             <p>&copy; {today.getFullYear()} | All rights reserved</p>
         </div>
         <div className="footer-container">
-            <p className="title">Contact Us</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident laborum perspiciatis quos voluptatum.</p>
+            <p className="title">Photo Credits</p>
+            <p>Vivid Milan</p>
+            <p>Waruna Chinthaka</p>
         </div>
         <div className="footer-container">
             <p className="title">Socials</p>

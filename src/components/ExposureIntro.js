@@ -1,6 +1,5 @@
 import React from "react";
 import ImageContainer from "./ImageContainer";
-import { Link } from "react-router-dom";
 
 const ExposureIntro = () => {
 
