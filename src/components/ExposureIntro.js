@@ -1,9 +1,23 @@
 import React from "react";
 import ImageContainer from "./ImageContainer";
+import { Link } from "react-router-dom";
 
 const ExposureIntro = () => {
 
-    const topics = ["Aperture", "Shutter Speed", "ISO"]
+    const topics = [
+      {
+        name: "Aperture",
+        href: "#aperture"
+      },
+      {
+        name: "Shutter Speed",
+        href: "#shutter-speed"
+      },
+      {
+        name: "ISO",
+        href: "#iso"
+      },
+    ]
 
   return (
     <section id="intro">
@@ -20,8 +34,8 @@ const ExposureIntro = () => {
         <br />
         <ul>
           {topics.map((topic) => (
-            <li key={topic} className="topic">
-              <b>{topic}</b>
+            <li key={topic.name} className="topic">
+              <a style={{textDecoration: 'none', color: 'inherit'}} href={topic.href}><b>{topic.name}</b></a>
             </li>
           ))}
         </ul>

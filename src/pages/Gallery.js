@@ -3,7 +3,7 @@ import ShowCase from '../components/ShowCase'
 
 const Gallery = () => {
 
-  const [showPic, setShowPic] = useState(true)
+  const [showPic, setShowPic] = useState(false)
   const [imageSrc, setImageSrc] = useState('')
 
   const test = (event) => {

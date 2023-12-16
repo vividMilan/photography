@@ -3,7 +3,7 @@ import IsoCardContainer from './IsoCardContainer'
 
 const IsoSection = () => {
   return (
-    <section id="shutter-speed">
+    <section id="iso">
       <h1>
         <span>ISO</span>
       </h1>
