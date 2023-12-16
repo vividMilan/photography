@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import Sidebar from './Sidebar'
 
 const Navbar = () => {
@@ -42,7 +42,9 @@ const Navbar = () => {
     })
   return (
     <nav className={isScrolled ? 'nav scroll' : 'nav'}>
-        <span>Photography</span>
+        <Link to='/'>
+            <span style={{cursor: "pointer"}}>Photography</span>
+        </Link>
         <ul className='link'>
             {linkItems.map((link) => (
                 <li key={link.title} >

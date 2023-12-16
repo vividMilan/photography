@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
-
+import ShowCase from '../components/ShowCase'
 
 const Gallery = () => {
 
-  const [showPic, setShowPic] = useState(false)
+  const [showPic, setShowPic] = useState(true)
+  const [imageSrc, setImageSrc] = useState('')
 
-  const alertSrc = (e) => {
-    console.log(e)
-    setShowPic(!showPic)
+  const test = (event) => {
+    setImageSrc(event.target.currentSrc)
+    setShowPic(true)
   }
+
 
   const galleryPics = [
     {
@@ -64,7 +66,7 @@ const Gallery = () => {
     {
       id: 11,
       name: "bird1Img",
-      imgSrc : 'assets/bird_1.jpg'
+      imgSrc : 'assets/gallery/bird_1.jpg'
     },
     {
       id: 12,
@@ -74,7 +76,8 @@ const Gallery = () => {
     {
       id: 13,
       name: "cuteSpiderImg",
-      imgSrc : 'assets/spider2.jpeg'
+      imgSrc : 'assets/gallery/spider2.jpeg',
+
     },
     {
       id: 14,
@@ -95,9 +98,15 @@ const Gallery = () => {
 
   return (
     <>
+      {showPic && (
+        <ShowCase 
+          imageSrc = {imageSrc}
+          setShowPic = {setShowPic}
+        />
+      )}
       <div className='gallery section'>
         {galleryPics.map((pic) => (
-          <img onClick={alertSrc} className='pic' src={pic.imgSrc} alt="" />
+          <img onClick={test} style={{height: pic.height}} key={pic.id} className='pic' src={pic.imgSrc} alt="" />
         ))}
       </div>
     </>
