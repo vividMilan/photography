@@ -26,7 +26,7 @@ const Gallery = () => {
     {
       id: 3,
       name: "spiderImg",
-      imgSrc : 'assets/Gallery/spider1.jpeg'
+      imgSrc : 'assets/Gallery/spider1.jpg'
     },
     {
       id: 4,
@@ -76,7 +76,7 @@ const Gallery = () => {
     {
       id: 13,
       name: "cuteSpiderImg",
-      imgSrc : 'assets/gallery/spider2.jpeg',
+      imgSrc : 'assets/gallery/spider2.jpg',
 
     },
     {
